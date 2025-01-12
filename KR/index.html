@@ -9,7 +9,6 @@
             background-color: black; /* 배경을 검정색으로 설정 */
             color: white; /* 텍스트 색을 흰색으로 설정 */
             font-family: Arial, sans-serif; /* 글꼴 설정 */
-            text-align: center; /* 텍스트를 가운데 정렬 */
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,19 +16,20 @@
             justify-content: center; /* 세로로 중앙 정렬 */
             align-items: center; /* 가로로 중앙 정렬 */
             height: 100vh; /* 화면 전체 높이 사용 */
+            overflow: hidden; /* 화면 크기에 맞게 오버플로우 숨김 */
         }
 
         h1 {
             font-size: 3em; /* 제목 크기 설정 */
             margin-bottom: 20px; /* 제목과 이미지 사이에 여백 추가 */
+            z-index: 1; /* 텍스트가 이미지 위로 나오게 설정 */
         }
 
         img {
-            width: auto; /* 이미지 너비를 100%로 설정 */
-            height: auto; /* 자동으로 비율에 맞게 높이 조정 */
-            object-fit: contain; /* 이미지가 잘리지 않도록 조정 */
-            max-width: 100%; /* 이미지가 브라우저 너비를 넘지 않도록 설정 */
-            margin-bottom: 40px; /* 이미지 아래에 여백 추가 */
+            width: 100%; /* 이미지 너비를 100%로 설정 */
+            height: 100vh; /* 이미지 높이를 화면 전체 높이로 설정 */
+            object-fit: contain; /* 이미지 비율 유지하면서 화면에 맞게 표시 */
+            margin-bottom: 20px; /* 이미지 아래에 여백 추가 */
             border: 5px solid white; /* 흰색 테두리 추가 */
             box-shadow: 0 0 20px #00FF00; /* 형광연두색 섬광 효과 */
             animation: glowing 1.5s infinite alternate; /* 섬광 애니메이션 */
@@ -155,7 +155,10 @@
     <img src="SCAN KR_페이지_77.jpg" alt="Scanned Report Image" />
     <img src="SCAN KR_페이지_78.jpg" alt="Scanned Report Image" />
 
- <!-- 맨 위로 올라가는 버튼 -->
+<!-- 이미지를 가운데 정렬하고 반응형으로 설정 -->
+    <img src="colorscan_KR_페이지_01.jpg" alt="Scanned Report Image" />
+
+    <!-- 맨 위로 올라가는 버튼 -->
     <button id="scrollTopBtn" onclick="scrollToTop()">Back to Top</button>
 
     <script>
