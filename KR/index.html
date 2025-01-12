@@ -15,8 +15,8 @@
             flex-direction: column;
             justify-content: center; /* 세로로 중앙 정렬 */
             align-items: center; /* 가로로 중앙 정렬 */
-            height: 100vh; /* 화면 전체 높이 사용 */
-            overflow: hidden; /* 화면 크기에 맞게 오버플로우 숨김 */
+            height: auto; /* 자동 높이로 설정 */
+            overflow: auto; /* 스크롤이 자동으로 생기도록 설정 */
         }
 
         h1 {
@@ -26,8 +26,8 @@
         }
 
         img {
-            width: auto; /* 이미지 너비를 100%로 설정 */
-            height: 100vh; /* 이미지 높이를 화면 전체 높이로 설정 */
+            width: 100%; /* 이미지 너비를 100%로 설정 */
+            max-height: 100vh; /* 이미지 높이를 화면 크기에 맞추되 넘지 않도록 설정 */
             object-fit: contain; /* 이미지 비율 유지하면서 화면에 맞게 표시 */
             margin-bottom: 20px; /* 이미지 아래에 여백 추가 */
             border: 5px solid white; /* 흰색 테두리 추가 */
@@ -75,7 +75,6 @@
     <h1>Fairy Mobility Bankruptcy Inquiry Report</h1>
     
     <!-- 이미지를 가운데 정렬하고 반응형으로 설정 -->
-    
     <img src="colorscan_KR_페이지_01.jpg" alt="Scanned Report Image" />
     <img src="colorscan_KR_페이지_02.jpg" alt="Scanned Report Image" />
     <img src="SCAN KR_페이지_03.jpg" alt="Scanned Report Image" />
@@ -156,7 +155,7 @@
     <img src="SCAN KR_페이지_78.jpg" alt="Scanned Report Image" />
 
 
-    <!-- 맨 위로 올라가는 버튼 -->
+   <!-- 맨 위로 올라가는 버튼 -->
     <button id="scrollTopBtn" onclick="scrollToTop()">Back to Top</button>
 
     <script>
@@ -178,4 +177,3 @@
     </script>
 </body>
 </html>
-
