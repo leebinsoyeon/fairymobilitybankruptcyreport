@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fulgent&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fairy Mobility Bankruptcy Inquiry Report</title>
@@ -8,7 +9,7 @@
         body {
             background-color: black; /* 배경을 검정색으로 설정 */
             color: #fbd2e7; /* 텍스트 색을 흰색으로 설정 */
-            font-family: Fulgent, Regular; /* 글꼴 설정 */
+            font-family: 'Fulgent', sans-serif; /* 글꼴 설정 */
             margin: 0;
             padding: 0;
             display: flex;
@@ -24,11 +25,15 @@
             margin-bottom: 20px; /* 제목과 이미지 사이에 여백 추가 */
             z-index: 1; /* 텍스트가 이미지 위로 나오게 설정 */
         }
+        
 
         img {
-            max-width: 80%; /* 이미지 크기를 화면에 맞게 설정 */
-            height: 100%;
+            width: 100%; /* 이미지의 너비를 화면에 맞게 조정 */
+            height: auto; /* 비율을 유지하며 높이를 자동으로 조정 */
+            max-width: 100%; /* 이미지가 브라우저 너비를 넘지 않도록 제한 */
             margin-bottom: 20px; /* 이미지 아래에 여백 추가 */
+            display: block; /* 이미지가 inline 요소처럼 취급되지 않도록 설정 */
+            margin: 0 auto; /* 가운데 정렬 */
             box-shadow: 0 0 20px #00FF00; /* 형광연두색 섬광 효과 */
             animation: glowing 1.5s infinite alternate; /* 형광 연두색 섬광 애니메이션 */
         }
@@ -65,6 +70,13 @@
         /* 버튼에 마우스를 올렸을 때 */
         #scrollTopBtn:hover {
             background-color: #45a049; /* 색상 변화 */
+        }
+
+        /* 반응형 글꼴 크기 조정 */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
